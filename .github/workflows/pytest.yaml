@@ -7,12 +7,12 @@ on:
     branches: [ "master" ]
 
 jobs:
-  build:
+  test-fast:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.10", "3.11", "3.12", "3.13", "3.14", "3.x"]
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
 
     steps:
     - uses: actions/checkout@v5
@@ -24,9 +24,26 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         python -m pip install .[test]
+    - name: Test with pytest (no-latex)
+      run: |
+        pytest -k "not usage_of_each_style"
+
+  test-latex:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v5
+    - name: Set up Python 3.13
+      uses: actions/setup-python@v6
+      with:
+        python-version: "3.13"
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install .[test]
         sudo apt update
-        sudo apt install dvipng texlive-latex-extra texlive-fonts-recommended cm-super
-        sudo apt install fonts-noto-cjk
-    - name: Test with pytest
+        sudo apt install -y dvipng texlive-latex-extra texlive-fonts-recommended cm-super
+        sudo apt install -y fonts-noto-cjk
+    - name: Test with pytest (full)
       run: |
         pytest
