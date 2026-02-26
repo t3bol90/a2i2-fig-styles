@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import re
-from typing import Dict, Tuple
+from typing import Dict
 
 _CONFERENCE_ALIASES = {
     "acl": "acl",
