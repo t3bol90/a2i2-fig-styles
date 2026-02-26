@@ -141,6 +141,46 @@ This generates:
 
 If LaTeX is unavailable, combine `a2i2` with `no-latex` as shown in the example script.
 
+Conference figure presets
+-------------------------
+
+For conference workflows, this repo also provides preset figure sizes by:
+- conference: `acl`, `kdd`, `icdm`, `neurips`
+- layout: `1col`, `2col`
+- figure type: `line`, `bar`, `scatter`, `heatmap`, `image-grid`, `text-equation`
+
+Canonical style name format:
+
+```python
+"{conference}-{layout}-{figure_type}"
+# example: "neurips-1col-line"
+```
+
+Use style names directly:
+
+```python
+import matplotlib.pyplot as plt
+import scienceplots
+
+plt.style.use(["science", "neurips-1col-line", "no-latex"])
+```
+
+Or use the helper API:
+
+```python
+from scienceplots import style_stack, get_preset, resolve_preset_name
+
+styles = style_stack("neurips", "1col", "line", no_latex=True)
+preset = get_preset("acl", "2col", "image-grid")
+canonical = resolve_preset_name("nips_line_1col")  # -> neurips-1col-line
+```
+
+Generate representative conference preset figures:
+
+```bash
+PYTHONPATH=src python3 examples/plot-conference-presets.py
+```
+
 Other languages
 ---------------
 
