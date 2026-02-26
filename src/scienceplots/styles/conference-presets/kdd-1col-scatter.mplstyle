@@ -1,0 +1,6 @@
+# kdd 1col scatter preset
+figure.figsize : 3.3, 2.8
+savefig.bbox : tight
+savefig.pad_inches : 0.02
+lines.markersize : 5.0
+legend.frameon : False

@@ -1,0 +1,7 @@
+# icdm 2col text-equation preset
+figure.figsize : 7.2, 2.0
+savefig.bbox : tight
+savefig.pad_inches : 0.02
+axes.titlepad : 4.0
+mathtext.fontset : stix
+legend.frameon : False

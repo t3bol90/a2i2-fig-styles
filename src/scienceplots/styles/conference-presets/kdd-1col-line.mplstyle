@@ -1,0 +1,7 @@
+# kdd 1col line preset
+figure.figsize : 3.3, 2.3
+savefig.bbox : tight
+savefig.pad_inches : 0.02
+lines.linewidth : 1.2
+lines.markersize : 4.0
+legend.frameon : False

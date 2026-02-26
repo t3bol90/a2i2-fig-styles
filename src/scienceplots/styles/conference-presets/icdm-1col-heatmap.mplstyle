@@ -1,0 +1,7 @@
+# icdm 1col heatmap preset
+figure.figsize : 3.5, 2.9
+savefig.bbox : tight
+savefig.pad_inches : 0.02
+image.interpolation : nearest
+xtick.major.pad : 2.5
+ytick.major.pad : 2.5

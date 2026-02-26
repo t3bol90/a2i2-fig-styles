@@ -1,0 +1,6 @@
+# acl 1col bar preset
+figure.figsize : 3.1, 2.5
+savefig.bbox : tight
+savefig.pad_inches : 0.02
+axes.xmargin : 0.03
+legend.frameon : False
