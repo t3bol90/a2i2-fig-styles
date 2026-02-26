@@ -1,0 +1,39 @@
+# Matplotlib style for A2I2 group paper figures.
+# Mirrors the _configure_matplotlib() settings used in our published papers.
+# Combine with 'no-latex' to disable LaTeX rendering when unavailable.
+
+# Color cycle: RdBu diverging palette, 5 colours (matches _CM = get_cmap("RdBu", 5))
+axes.prop_cycle : cycler('color', ['CA0020', 'F4A582', 'F7F7F7', '92C5DE', '0571B0'])
+
+# Font
+font.family : serif
+font.serif : Times New Roman, Times, Nimbus Roman No9 L, TeX Gyre Termes, STIXGeneral, DejaVu Serif
+mathtext.fontset : stix
+
+# Font sizes
+font.size : 8.5
+axes.labelsize : 9
+axes.titlesize : 9.5
+xtick.labelsize : 8
+ytick.labelsize : 8
+legend.fontsize : 7.5
+
+# Line widths
+axes.linewidth : 0.8
+lines.linewidth : 1.1
+
+# Resolution
+figure.dpi : 600
+savefig.dpi : 600
+
+# Save settings
+savefig.bbox : tight
+savefig.pad_inches : 0.02
+
+# Embed fonts in PDF/PS output
+pdf.fonttype : 42
+ps.fonttype : 42
+
+# LaTeX rendering (disable by layering 'no-latex' on top)
+text.usetex : True
+text.latex.preamble : \usepackage{amsmath}\usepackage{amssymb}
