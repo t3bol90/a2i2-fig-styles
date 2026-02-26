@@ -129,6 +129,18 @@ The ``science`` + ``nature`` styles for Nature articles:
 
    - Nature recommends sans-serif fonts.
 
+The ``a2i2`` style for AIxMHC/A2I2 paper figures:
+
+```bash
+PYTHONPATH=src python3 examples/plot-a2i2-examples.py
+```
+
+This generates:
+- `examples/figures/a2i2-response-curves.png`
+- `examples/figures/a2i2-benchmark-bars.png`
+
+If LaTeX is unavailable, combine `a2i2` with `no-latex` as shown in the example script.
+
 Other languages
 ---------------
 
