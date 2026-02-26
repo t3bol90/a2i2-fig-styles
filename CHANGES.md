@@ -5,6 +5,10 @@ Maintenance
 - Mitigate packaging issue where styles are not included in local bdist when `.git` folder is not present.
   Affected users exclusively are those building the wheel by themselves from a version repo source file, e.g., via AUR.
   See issue 151: https://github.com/garrettj403/SciencePlots/issues/151
+- Fix pytest discovery path in `pyproject.toml` (`src/scienceplots/tests`) to avoid fallback collection warnings.
+- Include `ruff` in the `test` extra and align lint workflow to install project test dependencies.
+- Split CI tests into fast matrix checks and a single full LaTeX-enabled test job to reduce repeated system package installs.
+- Add `a2i2` example generation command and outputs to `README.md`.
 
 v2.2.0 (20-Nov-2025)
 ====================
