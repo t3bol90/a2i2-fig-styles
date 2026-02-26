@@ -9,6 +9,10 @@ Maintenance
 - Include `ruff` in the `test` extra and align lint workflow to install project test dependencies.
 - Split CI tests into fast matrix checks and a single full LaTeX-enabled test job to reduce repeated system package installs.
 - Add `a2i2` example generation command and outputs to `README.md`.
+- Add conference figure presets for `acl`, `kdd`, `icdm`, and `neurips` across `1col` and `2col` layouts.
+- Add figure-type presets (`line`, `bar`, `scatter`, `heatmap`, `image-grid`, `text-equation`) and helper API (`get_preset`, `resolve_preset_name`, `style_stack`).
+- Add tests for preset alias resolution and deterministic figure dimensions.
+- Add `examples/plot-conference-presets.py` to generate PNG references for conference presets.
 
 v2.2.0 (20-Nov-2025)
 ====================
